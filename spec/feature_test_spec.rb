@@ -11,7 +11,13 @@ feature 'Home Page' do
   end
 
   scenario 'Player 1 can enter their name' do
-    visit('/play')
-    click_button('sign_in')
+    sign_in_and_play
     expect(page).to have_content('Player 1 : Jeff')
+end
+
+  scenario 'Player 1 able to choose Rock Paper or Scissors' do
+    sign_in_and_play
+    expect(page).to have_content('Choose one :') and have_field("Rock")
+  end
+
 end

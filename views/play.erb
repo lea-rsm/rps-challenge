@@ -1,1 +1,8 @@
-<h1>Player 1 : Jeff</h1>
+<h1>Player 1 : <%= @player_1%> </h1>
+
+<h2>Choose one :</h2>
+<form action='/choose' method = post>
+  <input type='submit' value ='Rock'>
+  <input type='submit' value ='Paper'>
+  <input type='submit' value ='Scissors'>
+</form>
